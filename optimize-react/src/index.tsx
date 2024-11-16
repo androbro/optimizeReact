@@ -7,6 +7,7 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import {CssBaseline, ThemeProvider} from "@mui/material";
 import theme from './theme';
+import './index.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
