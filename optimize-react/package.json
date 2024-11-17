@@ -9,7 +9,9 @@
     "build": "tsc -project config/typescript/tsconfig.json && vite build --config config/vite/vite.config.ts",
     "lint": "eslint . --config config/eslint/eslint.config.js",
     "preview": "vite preview --config config/vite/vite.config.ts",
-    "test": "vitest --ui"
+    "test": "vitest --ui",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,md}\" --config config/prettier/prettier.config.json",
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,css,md}\" --config config/prettier/prettier.config.json"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",

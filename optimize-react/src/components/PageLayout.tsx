@@ -1,11 +1,11 @@
-import {PropsWithChildren} from "react";
+import { PropsWithChildren } from 'react'
 
-type PageLayoutProps = PropsWithChildren;
+type PageLayoutProps = PropsWithChildren
 
-export default function PageLayout({children}: PageLayoutProps) {
+export default function PageLayout({ children }: PageLayoutProps) {
     return (
         // add sidebar here
         <div className="container mx-auto">{children}</div>
         // add footer here
-    );
+    )
 }

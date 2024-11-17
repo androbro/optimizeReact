@@ -17,16 +17,16 @@ hook-lab/
 
 ## Key Features
 
-- useState lifecycle visualization
-- useEffect patterns demonstration
-- Performance metrics tracking
-- Dependency visualization
+-   useState lifecycle visualization
+-   useEffect patterns demonstration
+-   Performance metrics tracking
+-   Dependency visualization
 
 ## Usage
 
 ```tsx
-import { StateVisualization, EffectPatterns } from './components';
-import { useStateDemo, useEffectDemo } from './hooks';
+import { StateVisualization, EffectPatterns } from './components'
+import { useStateDemo, useEffectDemo } from './hooks'
 
 // Example usage in your component
 ```
