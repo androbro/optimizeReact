@@ -1,0 +1,17 @@
+node_modules
+# Ignore artifacts:
+build
+Coverage
+dist
+.vscode
+coverage
+*.log
+.git
+.husky
+*.svg
+*.ico
+*.json
+*.yaml
+*.yml
+*.html
+.env*
