@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"vite\" \"npx tailwindcss -i ./src/index.css -o ./src/output.css --watch\"",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "tw": "npx tailwindcss -i ./src/index.css -o ./src/output.css --watch",
+    "dev": "concurrently \"vite --config config/vite/vite.config.ts\" \"npx tailwindcss -i ./src/index.css -o ./src/output.css --watch --config config/tailwind/tailwind.config.js\"",
+    "tw": "npx tailwindcss -i ./src/index.css -o ./src/output.css --watch --config config/tailwind/tailwind.config.js",
+    "build": "tsc -project config/typescript/tsconfig.json && vite build --config config/vite/vite.config.ts",
+    "lint": "eslint . --config config/eslint/eslint.config.js",
+    "preview": "vite preview --config config/vite/vite.config.ts",
     "test": "vitest --ui"
   },
   "dependencies": {
