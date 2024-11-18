@@ -33,36 +33,36 @@ const themeColors = {
 };
 
 const typography = {
-    fontFamily: '"Onest", "Helvetica", "Arial", sans-serif',
-    h1: {
-        fontSize: "3.75rem", // Tailwind text-4xl
-        fontWeight: 700,
-        color: themeColors.heading.light,
-    },
-    h2: {
-        fontSize: "1.75rem", // Tailwind text-3xl
-        fontWeight: 600,
-        color: themeColors.heading.light,
-    },
-    h3: {
-        fontSize: "1.375rem", // Tailwind text-2xl
-        fontWeight: 600,
-        color: themeColors.heading.light,
-    },
-    h4: {
-        fontSize: "1.25rem", // Tailwind text-xl
-        fontWeight: 500,
-        color: themeColors.heading.light,
-    },
-    body1: {
-        fontSize: "1rem", // Tailwind text-base
-        lineHeight: 1.5,
-    },
-    body2: {
-        fontSize: "0.875rem", // Tailwind text-sm
-        lineHeight: 1.5,
-    },
-    };
+  fontFamily: '"Onest", "Helvetica", "Arial", sans-serif',
+  h1: {
+    fontSize: "3.75rem", // Tailwind text-4xl
+    fontWeight: 700,
+    color: themeColors.heading.light,
+  },
+  h2: {
+    fontSize: "1.75rem", // Tailwind text-3xl
+    fontWeight: 600,
+    color: themeColors.heading.light,
+  },
+  h3: {
+    fontSize: "1.375rem", // Tailwind text-2xl
+    fontWeight: 600,
+    color: themeColors.heading.light,
+  },
+  h4: {
+    fontSize: "1.25rem", // Tailwind text-xl
+    fontWeight: 500,
+    color: themeColors.heading.light,
+  },
+  body1: {
+    fontSize: "1rem", // Tailwind text-base
+    lineHeight: 1.5,
+  },
+  body2: {
+    fontSize: "0.875rem", // Tailwind text-sm
+    lineHeight: 1.5,
+  },
+};
 
 // Light theme
 const lightTheme: ThemeOptions = {
