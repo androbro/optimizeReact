@@ -10,8 +10,8 @@
     "lint": "eslint . --config config/eslint/eslint.config.js",
     "preview": "vite preview --config config/vite/vite.config.ts",
     "test": "vitest --ui",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,md}\" --config config/prettier/prettier.config.json",
-    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,css,md}\" --config config/prettier/prettier.config.json"
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,md}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,css,md}\""
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
@@ -21,7 +21,6 @@
     "@mui/material": "^6.1.7",
     "motion": "^11.11.17",
     "postcss": "^8.4.49",
-    "prettier": "^3.3.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.28.0"
@@ -38,6 +37,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
+    "prettier": "^3.3.3",
     "tailwindcss": "^3.4.15",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.11.0",
