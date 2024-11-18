@@ -1,4 +1,4 @@
-import { colors } from '../../theme/theme';  // Use relative path from project root
+import { colors } from '../../src/theme/theme';  // Use relative path from project root
 
 /** @type {import('tailwindcss').Config} */
 export default {
