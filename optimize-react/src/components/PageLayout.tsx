@@ -16,12 +16,12 @@ export default function PageLayout({ children }: PageLayoutProps) {
         },
       }}
     >
-      <Grid size={2} p={2}>
+      <Grid size={3} p={2} minWidth={"10em"} maxWidth={"15rem"}>
         <Link href="/docs/design-system" underline="hover" color="inherit">
           Design System
         </Link>
       </Grid>
-      <Grid size={10} p={2} display="flex" justifyContent="center">
+      <Grid size={9} p={2} display="flex" justifyContent="center">
         {children}
       </Grid>
     </Grid>
