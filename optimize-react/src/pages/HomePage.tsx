@@ -1,14 +1,17 @@
-import PageLayout from '../components/PageLayout'
+import OuterPageLayout from '../components/PageLayout'
 import { Button, Typography } from '@mui/material'
+import InnerPageLayout from '../pages/components/PageLayout'
 
 interface HomePageProps {}
 
 export default function HomePage({}: HomePageProps) {
     return (
-        <PageLayout>
-            <div>
-                <Typography variant="h1">Home Page</Typography>
-            </div>
-        </PageLayout>
+        <OuterPageLayout>
+            <InnerPageLayout>
+                <div>
+                    <Typography variant="h1">Home Page</Typography>
+                </div>
+            </InnerPageLayout>
+        </OuterPageLayout>
     )
 }
