@@ -21,12 +21,48 @@ const themeColors = {
     light: "#000000", // Text color for light mode
     dark: "#A1A1A1", // Text color for dark mode
   },
+  heading: {
+    light: "#000000", // Heading color for light mode
+    dark: "#FFFFFF", // Heading color for dark mode
+  },
   border: {
     light: "#E5E7EB",
     dark: "#2B2B2B",
   },
   // You can extend this with your custom colors
 };
+
+const typography = {
+    fontFamily: '"Onest", "Helvetica", "Arial", sans-serif',
+    h1: {
+        fontSize: "3.75rem", // Tailwind text-4xl
+        fontWeight: 700,
+        color: themeColors.heading.light,
+    },
+    h2: {
+        fontSize: "1.75rem", // Tailwind text-3xl
+        fontWeight: 600,
+        color: themeColors.heading.light,
+    },
+    h3: {
+        fontSize: "1.375rem", // Tailwind text-2xl
+        fontWeight: 600,
+        color: themeColors.heading.light,
+    },
+    h4: {
+        fontSize: "1.25rem", // Tailwind text-xl
+        fontWeight: 500,
+        color: themeColors.heading.light,
+    },
+    body1: {
+        fontSize: "1rem", // Tailwind text-base
+        lineHeight: 1.5,
+    },
+    body2: {
+        fontSize: "0.875rem", // Tailwind text-sm
+        lineHeight: 1.5,
+    },
+    };
 
 // Light theme
 const lightTheme: ThemeOptions = {
@@ -42,33 +78,7 @@ const lightTheme: ThemeOptions = {
       primary: themeColors.text.light,
     },
   },
-  typography: {
-    fontFamily: '"Onest", "Helvetica", "Arial", sans-serif',
-    h1: {
-      fontSize: "3.75rem", // Tailwind text-4xl
-      fontWeight: 700,
-    },
-    h2: {
-      fontSize: "1.75rem", // Tailwind text-3xl
-      fontWeight: 600,
-    },
-    h3: {
-      fontSize: "1.375rem", // Tailwind text-2xl
-      fontWeight: 600,
-    },
-    h4: {
-      fontSize: "1.25rem", // Tailwind text-xl
-      fontWeight: 500,
-    },
-    body1: {
-      fontSize: "1rem", // Tailwind text-base
-      lineHeight: 1.5,
-    },
-    body2: {
-      fontSize: "0.875rem", // Tailwind text-sm
-      lineHeight: 1.5,
-    },
-  },
+  typography: typography,
   components: {
     MuiButton: {
       styleOverrides: {
@@ -94,6 +104,25 @@ const darkTheme: ThemeOptions = {
     },
     text: {
       primary: themeColors.text.dark,
+    },
+  },
+  typography: {
+    ...typography,
+    h1: {
+      ...typography.h1,
+      color: themeColors.heading.dark,
+    },
+    h2: {
+      ...typography.h2,
+      color: themeColors.heading.dark,
+    },
+    h3: {
+      ...typography.h3,
+      color: themeColors.heading.dark,
+    },
+    h4: {
+      ...typography.h4,
+      color: themeColors.heading.dark,
     },
   },
 };
