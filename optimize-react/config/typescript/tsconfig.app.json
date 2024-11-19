@@ -23,7 +23,10 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src"
   },
   "include": ["../../src/**/*"],
   "exclude": ["../../src/**/*.spec.*", "../../src/**/*.test.*"]

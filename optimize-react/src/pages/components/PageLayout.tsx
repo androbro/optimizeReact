@@ -1,49 +1,50 @@
 ﻿import { ChevronRight, Code } from '@mui/icons-material'
 import { PropsWithChildren, useState } from 'react'
+import { Breadcrumbs, Link, Typography } from '@mui/material'
+import { Path } from '@remix-run/router/history'
 
-type PageLayoutProps = PropsWithChildren
+interface PageLayoutProps extends PropsWithChildren {
+    currentLocation: Path
+}
 
-export default function PageLayout({ children }: PageLayoutProps) {
+export default function PageLayout({ children, currentLocation }: PageLayoutProps) {
     const [currentSection, setCurrentSection] = useState('visualization')
+    const pathnames = currentLocation.pathname.split('/').filter((x) => x)
 
     return (
-        <div className="min-h-screen bg-gray-50">
-            {/* Top Navigation */}
-            <nav className="bg-white border-b">
-                <div className="max-w-7xl mx-auto px-4">
-                    <div className="flex justify-between h-16">
-                        <div className="flex">
-                            <a href="#" className="flex items-center text-gray-900">
-                                <Code className="h-6 w-6 mr-2" />
-                                <span className="font-semibold">React Optimization Lab</span>
-                            </a>
-                        </div>
-                        <div className="flex items-center space-x-4">
-                            <button className="text-gray-500 hover:text-gray-700">{/*<LayoutGrid className="h-5 w-5" />*/}</button>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
-            <div className="max-w-7xl mx-auto px-4 py-6">
+        <div>
+            <div>
                 {/* Breadcrumb */}
-                <div className="flex items-center text-sm text-gray-500 mb-6">
-                    <span>Labs</span>
-                    <ChevronRight className="h-4 w-4 mx-2" />
-                    <span>useState Deep Dive</span>
+                <div>
+                    <Breadcrumbs aria-label="breadcrumb">
+                        {pathnames.map((value, index) => {
+                            const last = index === pathnames.length - 1
+                            const to = `/${pathnames.slice(0, index + 1).join('/')}`
+
+                            return last ? (
+                                <Typography key={to} sx={{ color: 'text.primary' }}>
+                                    {pathnames[pathnames.length - 1]}
+                                </Typography>
+                            ) : (
+                                <Link underline="hover" color="inherit" href={to} key={to}>
+                                    {to.slice(1, to.length)}
+                                </Link>
+                            )
+                        })}
+                    </Breadcrumbs>
                 </div>
 
                 {/* Main Content */}
-                <div className="bg-white rounded-lg shadow">
+                <div>
                     {/* Lab Header */}
-                    <div className="border-b px-6 py-4">
-                        <h1 className="text-xl font-semibold">useState Deep Dive</h1>
-                        <p className="text-gray-500 mt-1">Understanding React's state management internals</p>
+                    <div>
+                        <h1>useState Deep Dive</h1>
+                        <p>Understanding React's state management internals</p>
                     </div>
 
                     {/* Section Tabs */}
-                    <div className="border-b px-6">
-                        <nav className="flex -mb-px">
+                    <div>
+                        <nav>
                             {['theory', 'visualization', 'practice', 'testing'].map((section) => (
                                 <button
                                     key={section}

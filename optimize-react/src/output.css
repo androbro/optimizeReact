@@ -140,14 +140,12 @@
   }
 }
 
-#root .mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem
+#root .ml-1 {
+  margin-left: 0.25rem
 }
 
-#root .mx-auto {
-  margin-left: auto;
-  margin-right: auto
+#root .mr-8 {
+  margin-right: 2rem
 }
 
 #root .mt-4 {
@@ -158,72 +156,20 @@
   margin-top: 2rem
 }
 
-#root .-mb-px {
-  margin-bottom: -1px
-}
-
-#root .mb-6 {
-  margin-bottom: 1.5rem
-}
-
-#root .ml-1 {
-  margin-left: 0.25rem
-}
-
-#root .mr-2 {
-  margin-right: 0.5rem
-}
-
-#root .mr-8 {
-  margin-right: 2rem
-}
-
-#root .mt-1 {
-  margin-top: 0.25rem
-}
-
 #root .flex {
   display: flex
-}
-
-#root .h-screen {
-  height: 100vh
-}
-
-#root .h-16 {
-  height: 4rem
 }
 
 #root .h-4 {
   height: 1rem
 }
 
-#root .h-5 {
-  height: 1.25rem
-}
-
-#root .h-6 {
-  height: 1.5rem
-}
-
-#root .min-h-screen {
-  min-height: 100vh
+#root .h-screen {
+  height: 100vh
 }
 
 #root .w-4 {
   width: 1rem
-}
-
-#root .w-5 {
-  width: 1.25rem
-}
-
-#root .w-6 {
-  width: 1.5rem
-}
-
-#root .max-w-7xl {
-  max-width: 80rem
 }
 
 #root .items-center {
@@ -238,18 +184,8 @@
   gap: 1rem
 }
 
-#root :is(.space-x-4 > :not([hidden]) ~ :not([hidden])) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(1rem * var(--tw-space-x-reverse));
-  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)))
-}
-
 #root .rounded {
   border-radius: 0.25rem
-}
-
-#root .rounded-lg {
-  border-radius: 0.5rem
 }
 
 #root .rounded-b-lg {
@@ -259,10 +195,6 @@
 
 #root .border {
   border-width: 1px
-}
-
-#root .border-b {
-  border-bottom-width: 1px
 }
 
 #root .border-b-2 {
@@ -282,6 +214,11 @@
   border-color: transparent
 }
 
+#root .bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1))
+}
+
 #root .bg-primary-main {
   --tw-bg-opacity: 1;
   background-color: rgb(100 10 255 / var(--tw-bg-opacity, 1))
@@ -292,31 +229,16 @@
   background-color: rgb(250 255 127 / var(--tw-bg-opacity, 1))
 }
 
-#root .bg-gray-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1))
-}
-
-#root .bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1))
-}
-
 #root .p-4 {
   padding: 1rem
-}
-
-#root .p-8 {
-  padding: 2rem
 }
 
 #root .p-6 {
   padding: 1.5rem
 }
 
-#root .px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem
+#root .p-8 {
+  padding: 2rem
 }
 
 #root .px-6 {
@@ -327,11 +249,6 @@
 #root .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem
-}
-
-#root .py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem
 }
 
 #root .text-2xl {
@@ -368,15 +285,6 @@
   font-weight: 500
 }
 
-#root .font-semibold {
-  font-weight: 600
-}
-
-#root .text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1))
-}
-
 #root .text-blue-600 {
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity, 1))
@@ -392,19 +300,17 @@
   color: rgb(55 65 81 / var(--tw-text-opacity, 1))
 }
 
-#root .text-gray-900 {
+#root .text-white {
   --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity, 1))
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1))
 }
 
 #root .underline {
   text-decoration-line: underline
 }
 
-#root .shadow {
-  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+#root .filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
 }
 
 #root .hover\:text-blue-700:hover {

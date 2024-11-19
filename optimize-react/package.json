@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"vite --config config/vite/vite.config.ts\" \"npx tailwindcss -i ./src/index.css -o ./src/output.css --watch --config config/tailwind/tailwind.config.js\"",
+    "dev": "concurrently \"vite --port 5175 --config config/vite/vite.config.ts\" \"npx tailwindcss -i ./src/index.css -o ./src/output.css --watch --config config/tailwind/tailwind.config.js\"",
     "tw": "npx tailwindcss -i ./src/index.css -o ./src/output.css --watch --config config/tailwind/tailwind.config.js",
     "build": "tsc -project config/typescript/tsconfig.json && vite build --config config/vite/vite.config.ts",
     "lint": "eslint . --config config/eslint/eslint.config.js",
